@@ -1,0 +1,32 @@
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+.img-cover {
+	object-fit: cover;
+}
+
+img:not([src]):not([srcset]) {
+	visibility: hidden;
+}
+
+img[data-lazyloaded] {
+	opacity: 0;
+}
+
+img.litespeed-loaded {
+	-webkit-transition: opacity .5s linear 0.2s;
+	-moz-transition: opacity .5s linear 0.2s;
+	transition: opacity .5s linear 0.2s;
+	opacity: 1;
+}
+
+.img-important {
+	max-width: 100% !important;
+	height: auto !important;
+}

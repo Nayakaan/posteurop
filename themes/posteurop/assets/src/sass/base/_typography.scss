@@ -1,0 +1,73 @@
+/* ==========================================================================
+   #TYPOGRAPHY & COLORS & FONT WEIGHTS & LINE HEIGHTS
+   ========================================================================== */
+
+/**
+ * Font Colors
+ */
+
+.color-black {
+	color: $c-grey;
+}
+
+.color-white {
+	color: $c-white;
+}
+
+
+/**
+ * Font Weights
+ */
+.f-400 {
+	font-weight: 400;
+}
+
+.f-500 {
+	font-weight: 500;
+}
+
+.f-600 {
+	font-weight: 600;
+}
+
+.f-700 {
+	font-weight: 700;
+}
+
+.f-800 {
+	font-weight: 800;
+}
+
+/**
+ * Letter Spacing
+ */
+.l-normal {
+	letter-spacing: 0;
+}
+
+/**
+ * Font Type
+ */
+.f-text {
+	font-family: $main-family;
+}
+
+/**
+ * Line Heights
+ */
+
+.line-reset {
+	line-height: 1;
+}
+
+.line-medium {
+	line-height: 1.375;
+}
+
+
+/**
+ * Italic
+ */
+.f-italic {
+	font-style: italic;
+}

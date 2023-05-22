@@ -1,0 +1,29 @@
+/* ==========================================================================
+   # COMPONENTS / INTRO BANNER
+   ========================================================================== */
+
+.intro-banner {
+	background-color: $bg-blue;
+}
+
+.intro-banner__title {
+	font-weight: 300;
+}
+
+.intro-banner__inner {
+	max-width: 614px;
+	padding: 48px 0;
+}
+
+.intro-banner__dot {
+	position: absolute;
+	right: 0;
+	bottom: -24px;
+	background-color: $bg-white;
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,89 @@
+/* ==========================================================================
+   # COMPONENT / EXPLORE
+   ========================================================================== */
+
+.u-explore {
+	background-color: $bg-white;
+}
+
+.u-explore__inner {
+	position: relative;
+	z-index: $z-1;
+	padding-bottom: 86px;
+}
+
+.u-explore__title {
+	max-width: 540px;
+	margin-bottom: 16px;
+}
+
+.u-explore__text {
+	max-width: 440px;
+	margin-bottom: 46px;
+}
+
+.u-explore__cards {
+	display: grid;
+	gap: 32px 11px;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include bp(medium) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 32px 58px;
+	}
+
+	@include bp(large) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@include bp(xlarge) {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+.u-explore__bg {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+
+	svg {
+		display: block;
+		width: 100%;
+		max-width: 1920px;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+
+.u-explore__cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: $bg-white;
+	padding: 27px;
+	height: 100%;
+	transition: transform 200ms linear;
+
+	@include bp(large) {
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.u-explore__name {
+	text-align: center;
+	font-size: 1.3rem;
+	color: $c-blue;
+	@include letter-spacing(100);
+
+	@include bp(medium) {
+		font-size: 1.4rem;
+	}
+}
+
+.u-explore__img {
+	margin-bottom: 12px;
+}

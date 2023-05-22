@@ -1,0 +1,83 @@
+// ==========================================================================
+// #GLOBAL
+// ==========================================================================
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+$btn-transition: all 200ms linear !default;
+$overlay-transition: all 300ms ease-in !default;
+$transition-fast: all 150ms linear !default;
+$transition: all 200ms linear !default;
+$transition-slow: all 400ms linear !default;
+
+$nav: 126px;
+$nav-top: 48px;
+$nav-bottom: 78px;
+
+/* Fonts
+   ========================================================================== */
+
+$f-primary: myriadpro, sans-serif !default;
+
+/* Breakpoints
+   ========================================================================== */
+
+$breakpoints: (
+	small: 576px,
+	medium: 768px,
+	large: 992px,
+	xlarge: 1280px,
+	full: 1600px,
+);
+
+/* Colors
+   ========================================================================== */
+// Colors shouldn't be used directly but reassigned
+$white: #fff;
+$black: #000;
+
+$blue: #004997;
+$blue-2: #E5ECF4;
+$blue-3: #86A2C7;
+$blue-4: #043972;
+$blue-5: #E6ECF3;
+
+
+$grey: #525252;
+$grey-2: #707070;
+
+$c-white: $white;
+$c-black: $black;
+$c-grey: $grey;
+$c-blue: $blue;
+$c-blue-2: $blue-2;
+
+// Background
+$bg-black: $black;
+$bg-white: $white;
+
+$bg-blue: $blue;
+$bg-blue-2: $blue-2;
+$bg-blue-3: $blue-3;
+$bg-blue-4: $blue-4;
+$bg-blue-5: $blue-5;
+
+// Borders
+$b-black: $black;
+$b-white: $white;
+$b-blue: $blue;
+$b-blue-3: $blue-3;
+$b-grey-2: $grey-2;
+
+// Z-Index
+$z-1: 100;
+$z-2: 200;
+$z-3: 300;
+$z-4: 400;
+$z-5: 500;
+
+// Font Family
+$main-family: $f-primary;
+
+// Border Radius
+$global-radius: 20px;

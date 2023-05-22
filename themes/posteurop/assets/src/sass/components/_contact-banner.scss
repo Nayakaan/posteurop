@@ -1,0 +1,80 @@
+/* ==========================================================================
+   # COMPONENT / CONTACT BANNER
+   ========================================================================== */
+
+.c-banner {
+	background-color: $bg-blue;
+	color: $c-white;
+	padding: 64px 20px;
+
+	@include bp(medium) {
+		padding: 80px 20px 60px;
+	}
+}
+
+.c-banner__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: $z-1;
+}
+
+.c-banner__title {
+	color: $c-white;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.c-banner__text {
+	margin-bottom: 32px;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.c-banner__buttons {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+
+	@include bp(medium) {
+		flex-direction: row;
+		width: auto;
+	}
+}
+
+.c-banner__cta {
+	margin-bottom: 18px;
+
+	@include bp(medium) {
+		margin-right: 24px;
+		margin-bottom: 0;
+	}
+
+	&.u-btn {
+		width: 100%;
+		padding: 9px 14px;
+		justify-content: center;
+	}
+
+	&.u-btn-secondary {
+		margin-bottom: 0;
+		margin-right: 0;
+	}
+}
+
+.c-banner__secondary {
+	display: flex;
+	justify-content: center;
+}
+
+.c-banner__svg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	svg {
+		display: block;
+	}
+}

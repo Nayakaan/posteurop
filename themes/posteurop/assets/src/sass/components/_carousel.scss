@@ -1,0 +1,154 @@
+/* ==========================================================================
+   # COMPONENT / CAROUSEL
+   ========================================================================== */
+
+.u-carousel__container {
+	overflow: hidden;
+}
+
+.u-carousel__slide {
+	height: auto;
+
+}
+
+.u-carousel__main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color: $bg-white;
+
+	@include bp(large) {
+		flex-direction: row;
+	}
+}
+
+.u-carousel__photo {
+	width: 100%;
+	position: relative;
+
+	@include bp(large) {
+		width: 55%;
+	}
+
+	svg {
+		display: none;
+
+		@include bp(large) {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -6px;
+			height: 100%;
+		}
+	}
+}
+
+.u-carousel__copy {
+	width: 100%;
+	background-color: $bg-white;
+	display: flex;
+	align-items: center;
+
+	@include bp(large) {
+		width: 45%;
+	}
+}
+
+.u-carousel__text {
+	margin-bottom: 28px;
+
+	p {
+		line-height: 1.375;
+		margin-bottom: 22px;
+	}
+}
+
+.u-carousel__print {
+	padding: 30px 30px 50px;
+
+	@include bp(medium) {
+		padding: 60px 40px 60px 50px;
+	}
+}
+
+.u-carousel__title {
+	margin-bottom: 24px;
+	font-weight: 300;
+}
+
+.u-carousel__control {
+	position: relative;
+}
+
+.u-carousel__arrows {
+	display: none;
+
+	@include bp(xlarge) {
+		display: block;
+		position: absolute;
+		z-index: $z-1;
+		top: 50%;
+		left: -65px;
+		transform: translateY(-50%);
+		width: calc(100% + 130px);
+		display: flex;
+		justify-content: space-between;
+		pointer-events: none;
+	}
+}
+
+.u-carousel__prev,
+.u-carousel__next {
+	background-color: $bg-white;
+	width: 46px;
+	height: 46px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+.u-carousel__prev {
+	svg {
+		transform: rotate(180deg);
+	}
+}
+
+/* Pagination
+    ========================================================================== */
+.u-carousel__pagination {
+	position: absolute;
+	bottom: 20px;
+	height: 12px;
+	z-index: $z-2;
+	left: 30px;
+
+	@include bp(medium) {
+		left: 50px;
+		bottom: 30px;
+	}
+
+	@include bp(large) {
+		left: auto;
+		right: calc(45% - 50px);
+		transform: translateX(100%);
+	}
+
+	.swiper-pagination-bullet {
+		width: 9px;
+		height: 9px;
+		margin: 0 6px;
+		border-radius: 50%;
+		background-color: transparent;
+		border: 1px solid $b-blue;
+		transition: $transition;
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $bg-blue;
+	}
+}

@@ -1,0 +1,50 @@
+/* ==========================================================================
+   # COMPONENT / OUR MEMBERS
+   ========================================================================== */
+
+.our-members__ul {
+	margin: 0;
+	padding: 0;
+}
+
+.our-members__li {
+	list-style: none;
+}
+
+/* [1] 'auto-fit' grid columns, so no media queries required. */
+/* [2] 'dense' packing fills in holes earlier in the grid. */
+.grid {
+	display: grid;
+	gap: 1rem;
+	grid-auto-flow: dense;
+	/* [2] */
+	grid-template-columns: repeat(4, 1fr);
+	/* [1] */
+	justify-content: center;
+}
+
+.grid>* {
+	align-items: flex-start;
+	background: #eee;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* [3] Make fullwidth card span all grid columns. */
+.fullwidth {
+	grid-column: 1 / -1;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.fullwidth,
+.is-selected {
+	background: wheat;
+}
+
+.our-members__btn {
+	border: 0;
+}

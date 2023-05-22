@@ -1,0 +1,68 @@
+/**
+* Importing by selector filtering example
+* https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer#selector-filtering
+ */
+// @import '{ .util-color-red, .util-color-blue } from utils/_example-1.scss';
+
+// @import '{ .util-with-weird-name as .util--normalized } from utils/_example-2.scss';
+
+/**
+* Importing by glob example
+* https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer#globbing
+ */
+// @import 'components/**/*.scss';
+
+/**
+* Theme Name: The Scalers Child
+* Description: This is a child theme of The Scalers.
+* Template: The Scalers
+* Version: 1.7.0
+*/
+@import 'utils/swiper';
+
+@import 'vendors/swiper-bundle.scss';
+
+@import 'variables/variables';
+
+@import 'tools/breakpoints';
+@import 'tools/hidden';
+@import 'tools/ratio';
+@import 'tools/letter-spacing';
+@import 'tools/absolute';
+
+@import 'base/html';
+@import 'base/fonts';
+@import 'base/normalize';
+@import 'base/headings';
+@import 'base/typography';
+@import 'base/wrappers';
+
+@import 'layout/layout';
+
+@import 'utilities/align';
+@import 'utilities/border';
+@import 'utilities/colors';
+@import 'utilities/display';
+@import 'utilities/margin';
+@import 'utilities/outline';
+@import 'utilities/sizes';
+@import 'utilities/transition';
+@import 'utilities/z-index';
+
+@import 'elements/links';
+@import 'elements/button';
+@import 'elements/images';
+@import 'elements/list';
+@import 'elements/accordion';
+
+@import "components/menu-desktop";
+@import "components/menu-mobile";
+@import "components/footer";
+@import "components/heavy-content";
+@import "components/spacing-component";
+@import "components/carousel";
+@import "components/contact-banner";
+@import "components/explore";
+@import "components/text-content";
+@import "components/into-banner";
+@import "components/our-members";

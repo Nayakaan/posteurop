@@ -1,0 +1,49 @@
+/* ==========================================================================
+   # COMPONENT / SPACING
+   ========================================================================== */
+@use 'sass:math';
+
+.s-component--blue {
+	background-color: $bg-blue-2;
+}
+
+.s-component--white {
+	background-color: $bg-white;
+}
+
+// Mixin for spacing bottom
+@mixin generate($prefix, $property) {
+	// List of sizes to generate for each
+	$sizes: [8,
+	16,
+	24,
+	32,
+	40,
+	48,
+	56,
+	64,
+	72,
+	80];
+	// Spacing to multiply the sizes by
+	$spacing: 1px;
+
+	// Loop through all of the sizes(we use @for rather than @each, as we want access to the index)
+	@for $i from 1 through length($sizes) {
+		// Get the size for the current index
+		$size: nth($sizes, $i);
+
+		// Create the rule
+		.#{$prefix}-#{$size} {
+			#{$property}: $spacing * $size;
+
+		}
+
+		.#{$prefix}-#{$size}.half-on-mobile {
+			@media (max-width: 767px) {
+				#{$property}: math.div(($spacing * $size), 2);
+			}
+		}
+	}
+}
+
+@include generate(spacing, padding-bottom);

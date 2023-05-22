@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #LINKS
+   ========================================================================== */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.t-underline {
+	text-decoration: underline;
+}
+
+.t-nowrap {
+	white-space: nowrap;
+}
+
+.phone-number {
+	min-width: 115px;
+	display: inline-block;
+
+	&.phone-number--head {
+		min-width: 150px;
+	}
+}
+
+.c-pointer {
+	cursor: pointer;
+}
+
+.c-none {
+	pointer-events: none;
+}
