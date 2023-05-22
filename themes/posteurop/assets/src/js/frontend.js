@@ -10,7 +10,7 @@ import './modules/skip-link-focus-fix';
 
 import { SearchBar } from './modules/searchBar';
 import { MobileMenu } from './modules/mobileMenu';
-import { MembersCards } from './modules/members-cards'
+import { MembersCards } from './modules/membersCards'
 import { HeavyCarousel } from './swiper/swiper'
 
 /**

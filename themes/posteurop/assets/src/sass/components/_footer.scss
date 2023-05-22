@@ -4,6 +4,7 @@
 
 .p-footer {
 	padding: 37px 0 23px;
+	background-color: $bg-blue-6;
 
 	@include bp(large) {
 		padding: 42px 0 33px;

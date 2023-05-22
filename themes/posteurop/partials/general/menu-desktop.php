@@ -3,7 +3,9 @@
 		<div class="u-menu__inner">
 			<div class="u-menu__top">
 				<div class="u-menu__logo">
-					<?php include get_icons_directory('svg/logo.svg') ?>
+					<a href="<?= home_url(); ?>">
+						<?php include get_icons_directory('svg/logo.svg') ?>
+					</a>
 					<div id="burger-menu" class="u-header__mobile__burger d-flex">
 						<div class="burger-menu__content">
 							<span class="u-header__mobile__bar"></span>

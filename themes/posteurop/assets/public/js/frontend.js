@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/src/js/modules/members-cards.js":
-/*!************************************************!*\
-  !*** ./assets/src/js/modules/members-cards.js ***!
-  \************************************************/
+/***/ "./assets/src/js/modules/membersCards.js":
+/*!***********************************************!*\
+  !*** ./assets/src/js/modules/membersCards.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -8603,7 +8603,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_skip_link_focus_fix__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_skip_link_focus_fix__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_searchBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/searchBar */ "./assets/src/js/modules/searchBar.js");
 /* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/mobileMenu */ "./assets/src/js/modules/mobileMenu.js");
-/* harmony import */ var _modules_members_cards__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/members-cards */ "./assets/src/js/modules/members-cards.js");
+/* harmony import */ var _modules_membersCards__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/membersCards */ "./assets/src/js/modules/membersCards.js");
 /* harmony import */ var _swiper_swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./swiper/swiper */ "./assets/src/js/swiper/swiper.js");
 /**
  * SASS
@@ -8626,7 +8626,7 @@ window.addEventListener('DOMContentLoaded', function () {
   var searchBar = new _modules_searchBar__WEBPACK_IMPORTED_MODULE_2__.SearchBar();
   var mobileMenu = new _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_3__.MobileMenu();
   var heavyCarousel = new _swiper_swiper__WEBPACK_IMPORTED_MODULE_5__.HeavyCarousel();
-  var membersCards = new _modules_members_cards__WEBPACK_IMPORTED_MODULE_4__.MembersCards();
+  var membersCards = new _modules_membersCards__WEBPACK_IMPORTED_MODULE_4__.MembersCards();
 });
 })();
 

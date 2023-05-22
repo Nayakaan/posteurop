@@ -12,7 +12,7 @@
 
 ?>
 
-<footer class="p-footer bg-blue">
+<footer class="p-footer">
 	<div class="main-wrapper">
 		<div class="p-footer__inner">
 			<div class="p-footer__social">

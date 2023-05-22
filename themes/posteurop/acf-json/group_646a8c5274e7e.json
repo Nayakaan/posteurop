@@ -125,6 +125,22 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_646bc3041fa47",
+                    "label": "Link",
+                    "name": "memebrs_social_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
                     "key": "field_646a8d4a87917",
                     "label": "Linkedin",
                     "name": "members_linkedin",
@@ -209,5 +225,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684704690
+    "modified": 1684784033
 }

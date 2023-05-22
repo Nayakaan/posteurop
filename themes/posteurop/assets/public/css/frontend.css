@@ -2953,6 +2953,7 @@ img.litespeed-loaded {
 
 .p-footer {
   padding: 37px 0 23px;
+  background-color: #0C3C71;
 }
 @media (min-width: 992px) {
   .p-footer {
@@ -3672,9 +3673,17 @@ img.litespeed-loaded {
   justify-content: center;
 }
 
+.intro-banner__arrow svg {
+  display: block;
+}
+
 /* ==========================================================================
    # COMPONENT / OUR MEMBERS
    ========================================================================== */
+.our-members {
+  padding: 65px 0;
+}
+
 .our-members__ul {
   margin: 0;
   padding: 0;
@@ -3683,41 +3692,189 @@ img.litespeed-loaded {
 .our-members__li {
   list-style: none;
 }
+.our-members__li.is-selected .our-members__svg svg {
+  transform: rotate(180deg);
+}
 
-/* [1] 'auto-fit' grid columns, so no media queries required. */
-/* [2] 'dense' packing fills in holes earlier in the grid. */
-.grid {
+.our-members__grid {
   display: grid;
   gap: 1rem;
   grid-auto-flow: dense;
-  /* [2] */
-  grid-template-columns: repeat(4, 1fr);
-  /* [1] */
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px 0;
   justify-content: center;
 }
-
-.grid > * {
-  align-items: flex-start;
-  background: #eee;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+@media (min-width: 768px) {
+  .our-members__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+  }
+}
+@media (min-width: 992px) {
+  .our-members__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .our-members__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-/* [3] Make fullwidth card span all grid columns. */
 .fullwidth {
   grid-column: 1/-1;
 }
-
-.is-hidden {
+.fullwidth.is-hidden {
   display: none;
-}
-
-.fullwidth,
-.is-selected {
-  background: wheat;
 }
 
 .our-members__btn {
   border: 0;
+}
+
+.our-members__logo {
+  pointer-events: none;
+}
+
+.our-members__cta {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  background-color: #fff;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .our-members__cta {
+    padding: 20px;
+  }
+}
+
+.our-members__drop {
+  color: #004997;
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+
+.our-members__logo {
+  margin-right: 22px;
+  display: block;
+}
+
+.our-members__svg {
+  position: absolute;
+  pointer-events: none;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .our-members__svg {
+    right: unset;
+    top: unset;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.our-members__svg svg {
+  transition: transform 200ms linear;
+}
+
+.our-members__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.our-members__close svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.our-members__main {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.our-members__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.our-members__image {
+  width: 100%;
+  order: 2;
+}
+@media (min-width: 768px) {
+  .our-members__image {
+    width: 40%;
+    order: 0;
+  }
+}
+
+.our-members__content {
+  width: 100%;
+  order: 0;
+  padding: 20px 20px 26px 20px;
+}
+@media (min-width: 768px) {
+  .our-members__content {
+    width: 60%;
+    order: 2;
+    padding: 30px 50px 30px 60px;
+  }
+}
+
+.our-members__title {
+  font-size: 2.8rem;
+  color: #004997;
+  margin-bottom: 12px;
+  padding-right: 40px;
+}
+
+.our-members__text {
+  font-weight: 300;
+}
+.our-members__text p {
+  margin-bottom: 20px;
+}
+
+.our-members__social {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .our-members__social {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.our-members__direct {
+  margin-bottom: 9px;
+}
+@media (min-width: 768px) {
+  .our-members__direct {
+    margin-bottom: 0;
+  }
+}
+
+.our-members__link {
+  margin-right: 14px;
+  color: #7FA3CB;
+  letter-spacing: 0.1em;
+  font-size: 1.4rem;
+  display: inline-block;
+}
+.our-members__link svg {
+  display: block;
 }
