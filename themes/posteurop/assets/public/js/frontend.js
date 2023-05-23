@@ -88,6 +88,55 @@ var MembersCards = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./assets/src/js/modules/membersFilters.js":
+/*!*************************************************!*\
+  !*** ./assets/src/js/modules/membersFilters.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MembersFilters: () => (/* binding */ MembersFilters)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var MembersFilters = /*#__PURE__*/function () {
+  function MembersFilters() {
+    _classCallCheck(this, MembersFilters);
+    this.selectDropdown = document.querySelector('.js-members-select');
+    this.allMembers = document.querySelectorAll('.our-members__li');
+    this.events();
+  }
+  _createClass(MembersFilters, [{
+    key: "events",
+    value: function events() {
+      var _this = this;
+      this.selectDropdown.addEventListener('change', function () {
+        _toConsumableArray(_this.allMembers).map(function (member) {
+          member.classList.remove('our-members__li--hide');
+          if (!member.dataset.categories.includes(_this.selectDropdown.value)) {
+            member.classList.add('our-members__li--hide');
+          }
+        });
+      });
+    }
+  }]);
+  return MembersFilters;
+}();
+
+/***/ }),
+
 /***/ "./assets/src/js/modules/mobileMenu.js":
 /*!*********************************************!*\
   !*** ./assets/src/js/modules/mobileMenu.js ***!
@@ -8604,7 +8653,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_searchBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/searchBar */ "./assets/src/js/modules/searchBar.js");
 /* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/mobileMenu */ "./assets/src/js/modules/mobileMenu.js");
 /* harmony import */ var _modules_membersCards__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/membersCards */ "./assets/src/js/modules/membersCards.js");
-/* harmony import */ var _swiper_swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./swiper/swiper */ "./assets/src/js/swiper/swiper.js");
+/* harmony import */ var _modules_membersFilters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/membersFilters */ "./assets/src/js/modules/membersFilters.js");
+/* harmony import */ var _swiper_swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./swiper/swiper */ "./assets/src/js/swiper/swiper.js");
 /**
  * SASS
  */
@@ -8619,14 +8669,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Add here your JavasScript code
  */
 window.addEventListener('DOMContentLoaded', function () {
   var searchBar = new _modules_searchBar__WEBPACK_IMPORTED_MODULE_2__.SearchBar();
   var mobileMenu = new _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_3__.MobileMenu();
-  var heavyCarousel = new _swiper_swiper__WEBPACK_IMPORTED_MODULE_5__.HeavyCarousel();
+  var heavyCarousel = new _swiper_swiper__WEBPACK_IMPORTED_MODULE_6__.HeavyCarousel();
   var membersCards = new _modules_membersCards__WEBPACK_IMPORTED_MODULE_4__.MembersCards();
+  var membersFilters = new _modules_membersFilters__WEBPACK_IMPORTED_MODULE_5__.MembersFilters();
 });
 })();
 

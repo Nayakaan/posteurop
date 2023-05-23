@@ -3,7 +3,11 @@
    ========================================================================== */
 
 .our-members {
-	padding: 65px 0;
+	padding: 45px 0;
+
+	@include bp(medium) {
+		padding: 65px 0;
+	}
 }
 
 .our-members__ul {
@@ -13,6 +17,7 @@
 
 .our-members__li {
 	list-style: none;
+	display: block;
 
 	&.is-selected {
 		.our-members__svg {
@@ -21,6 +26,10 @@
 			}
 		}
 	}
+}
+
+.our-members__li--hide {
+	display: none;
 }
 
 .our-members__grid {
@@ -108,11 +117,16 @@
 
 .our-members__close {
 	position: absolute;
-	top: 30px;
-	right: 30px;
+	top: 26px;
+	right: 26px;
 	border: 0;
 	background-color: transparent;
 	cursor: pointer;
+
+	@include bp(medium) {
+		top: 30px;
+		right: 30px;
+	}
 
 	svg {
 		display: block;
@@ -191,13 +205,48 @@
 }
 
 .our-members__link {
-	margin-right: 14px;
+	margin-right: 16px;
 	color: $c-blue-7;
 	@include letter-spacing(100);
 	font-size: 1.4rem;
 	display: inline-block;
 
+	@include bp(medium) {
+		margin-right: 14px;
+	}
+
 	svg {
 		display: block;
+	}
+}
+
+.our-members__select {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 30px;
+
+	select {
+		width: 100%;
+		background-color: $bg-white;
+		appearance: none;
+		border: none;
+		outline: none;
+		padding: 15px 19px;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.451' height='7.64' viewBox='0 0 12.451 7.64'%3E%3Cpath fill='none' stroke='%23024997' stroke-width='2' d='m.707.707 5.518 5.518L11.743.707' data-name='Path 27'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position-x: 96%;
+		background-position-y: 20px;
+
+		@include bp(medium) {
+			width: auto;
+			min-width: 216px;
+			background-position-x: 95%;
+			background-position-y: 16px;
+			padding: 11px 16px;
+		}
+	}
+
+	select::-ms-expand {
+		display: none;
 	}
 }

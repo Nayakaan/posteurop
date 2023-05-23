@@ -15,7 +15,6 @@ $link = get_field("members_link") ?? "";
 $image = get_field("members_image") ?? "";
 
 $social_group = get_field('members_social_media');
-
 $link_social = $social_group["memebrs_social_link"] ?? "";
 $linkedin = $social_group["members_linkedin"] ?? "";
 $twitter = $social_group["members_twitter"] ?? "";
@@ -23,17 +22,12 @@ $facebook = $social_group["members_facebook"] ?? "";
 $youtube = $social_group["members_youtube"] ?? "";
 
 $count = $count ?? "";
-$post_id = $post_id ?? "";
+$terms_string = $terms_string ?? "";
 
-var_dump($post_id);
-
-$post_categories = get_the_terms($post_id, 'types');
-
-var_dump($post_categories);
 ?>
 
 
-<li class="our-members__li">
+<li class="our-members__li" data-categories="all <?php echo $terms_string ?>">
 	<a class="our-members__cta p-relative" data-quick-view>
 		<img class="our-members__logo" src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>">
 		<div class="our-members__drop">

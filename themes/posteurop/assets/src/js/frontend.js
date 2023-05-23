@@ -11,6 +11,7 @@ import './modules/skip-link-focus-fix';
 import { SearchBar } from './modules/searchBar';
 import { MobileMenu } from './modules/mobileMenu';
 import { MembersCards } from './modules/membersCards'
+import { MembersFilters } from './modules/membersFilters'
 import { HeavyCarousel } from './swiper/swiper'
 
 /**
@@ -21,5 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = new MobileMenu();
   const heavyCarousel = new HeavyCarousel();
   const membersCards = new MembersCards();
+  const membersFilters = new MembersFilters();
 });
 
