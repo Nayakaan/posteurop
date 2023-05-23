@@ -112,9 +112,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var MembersFilters = /*#__PURE__*/function () {
-  function MembersFilters() {
+  function MembersFilters(selectDropdown) {
     _classCallCheck(this, MembersFilters);
-    this.selectDropdown = document.querySelector('.js-members-select');
+    this.selectDropdown = selectDropdown;
     this.allMembers = document.querySelectorAll('.our-members__li');
     this.events();
   }
@@ -8674,11 +8674,20 @@ __webpack_require__.r(__webpack_exports__);
  * Add here your JavasScript code
  */
 window.addEventListener('DOMContentLoaded', function () {
+  var selectDropdown = document.querySelector('.js-members-select');
+  var membersAccordion = document.querySelector('.our-members__grid');
+  var swiperWrapper = document.querySelector('.swiper-wrapper');
   var searchBar = new _modules_searchBar__WEBPACK_IMPORTED_MODULE_2__.SearchBar();
   var mobileMenu = new _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_3__.MobileMenu();
-  var heavyCarousel = new _swiper_swiper__WEBPACK_IMPORTED_MODULE_6__.HeavyCarousel();
-  var membersCards = new _modules_membersCards__WEBPACK_IMPORTED_MODULE_4__.MembersCards();
-  var membersFilters = new _modules_membersFilters__WEBPACK_IMPORTED_MODULE_5__.MembersFilters();
+  if (membersAccordion) {
+    var membersCards = new _modules_membersCards__WEBPACK_IMPORTED_MODULE_4__.MembersCards();
+  }
+  if (selectDropdown) {
+    var membersFilters = new _modules_membersFilters__WEBPACK_IMPORTED_MODULE_5__.MembersFilters(selectDropdown);
+  }
+  if (swiperWrapper) {
+    var heavyCarousel = new _swiper_swiper__WEBPACK_IMPORTED_MODULE_6__.HeavyCarousel();
+  }
 });
 })();
 

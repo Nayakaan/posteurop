@@ -18,10 +18,24 @@ import { HeavyCarousel } from './swiper/swiper'
  * Add here your JavasScript code
  */
 window.addEventListener('DOMContentLoaded', () => {
+  const selectDropdown = document.querySelector('.js-members-select');
+  const membersAccordion = document.querySelector('.our-members__grid')
+  const swiperWrapper = document.querySelector('.swiper-wrapper')
+
+
   const searchBar = new SearchBar();
   const mobileMenu = new MobileMenu();
-  const heavyCarousel = new HeavyCarousel();
-  const membersCards = new MembersCards();
-  const membersFilters = new MembersFilters();
+
+  if (membersAccordion) {
+    const membersCards = new MembersCards();
+  }
+
+  if (selectDropdown) {
+    const membersFilters = new MembersFilters(selectDropdown);
+  }
+
+  if (swiperWrapper) {
+    const heavyCarousel = new HeavyCarousel();
+  }
 });
 

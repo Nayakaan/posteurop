@@ -1,6 +1,6 @@
 export class MembersFilters {
-  constructor() {
-    this.selectDropdown = document.querySelector('.js-members-select');
+  constructor(selectDropdown) {
+    this.selectDropdown = selectDropdown;
     this.allMembers = document.querySelectorAll('.our-members__li')
     this.events();
   }
