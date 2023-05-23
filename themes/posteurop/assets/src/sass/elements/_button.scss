@@ -51,7 +51,7 @@
 		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.201' height='8.904' viewBox='0 0 16.201 8.904'%3E%3Cg fill='none' stroke='%23024997' stroke-width='1.5' data-name='Group 86'%3E%3Cpath d='M-.001 4.452H15.14' data-name='Path 31'/%3E%3Cpath d='m11.218.53 3.922 3.922-3.922 3.922' data-name='Path 32'/%3E%3C/g%3E%3C/svg%3E");
 		position: absolute;
 		right: -6px;
-		transition: right 200ms linear;
+		transition: all 200ms linear;
 	}
 
 	@include bp(large) {
@@ -68,6 +68,24 @@
 
 	&::after {
 		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.201' height='8.904' viewBox='0 0 16.201 8.904'%3E%3Cg fill='none' stroke='%23e6ecf3' stroke-width='1.5' data-name='Group 86'%3E%3Cpath d='M-.001 4.452H15.14' data-name='Path 31'/%3E%3Cpath d='m11.218.53 3.922 3.922-3.922 3.922' data-name='Path 32'/%3E%3C/g%3E%3C/svg%3E");
+	}
+}
+
+.u-btn-secondary--back {
+	&::after {
+		right: auto;
+		left: -26px;
+		transform: rotate(180deg);
+		height: 19px;
+	}
+
+	@include bp(large) {
+		&:hover {
+			&::after {
+				right: auto;
+				left: -32px;
+			}
+		}
 	}
 }
 
