@@ -29,5 +29,4 @@
 
 		<header id="masthead" class="site-header">
 			<?php get_template_part('partials/general/menu-desktop') ?>
-
 		</header><!-- #masthead -->
